@@ -28,6 +28,6 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': mime[ext] || 'text/plain' });
     res.end(data);
   });
-}).listen(PORT, () => {
-  console.log(`✅ Сервер іске қосылды: http://localhost:${PORT}`);
+}).listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Сервер іске қосылды: http://0.0.0.0:${PORT}`);
 });
